@@ -89,6 +89,7 @@ gulp.task('homeScripts', function() {
 
     return gulp.src([
             sourceDir + '/jquery-2.2.1.min.js',
+            sourceDir + '/swiper.min.js',
             sourceDir + '/home-main.js'
         ])
 

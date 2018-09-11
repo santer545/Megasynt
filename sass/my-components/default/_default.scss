@@ -12,6 +12,7 @@ body {
     background-color: #fff;
     color: #9A9A9A;
     font: 400 16px 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 a {
@@ -45,9 +46,6 @@ strong {
 
 .wrapper {
     min-width: 320px;
-    width: 100%;
-    display: table;
-    table-layout: fixed;
     height: 100vh;
 }
 
@@ -84,7 +82,6 @@ strong {
 .d-f {
     @media screen and (min-width: 768px) {
         display: flex;
-        flex-wrap: wrap;
     }
 }
 

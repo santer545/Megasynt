@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="40px" viewBox="0 0 28 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>placeholder-black-shape-for-localization-on-maps</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Megasynt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Megasynt-3" transform="translate(-1666.000000, -6135.000000)" fill="#BC814C" fill-rule="nonzero">
+            <g id="Group-12" transform="translate(0.000000, 5941.000000)">
+                <g id="placeholder-black-shape-for-localization-on-maps" transform="translate(1666.000000, 194.000000)">
+                    <path d="M13.6363636,0 C4.51090909,0 0,6.36 0,14.2054545 C0,22.0509091 13.6363636,40 13.6363636,40 C13.6363636,40 27.2727273,22.0509091 27.2727273,14.2054545 C27.2727273,6.36 22.7618182,0 13.6363636,0 Z M13.6363636,19.0909091 C9.62,19.0909091 6.36363636,15.8345455 6.36363636,11.8181818 C6.36363636,7.80181818 9.62,4.54545455 13.6363636,4.54545455 C17.6527273,4.54545455 20.9090909,7.80181818 20.9090909,11.8181818 C20.9090909,15.8345455 17.6527273,19.0909091 13.6363636,19.0909091 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

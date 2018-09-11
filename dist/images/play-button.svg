@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Megasynt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Megasynt-Mobile" transform="translate(-85.000000, -2416.000000)" fill="#BC814C" fill-rule="nonzero">
+            <g id="play-button-copy" transform="translate(85.000000, 2416.000000)">
+                <path d="M8.92440238,5.7647131 L0.63848706,0.0502887426 C0.550770646,-0.00999843432 0.437053601,-0.0162843011 0.343337042,0.0325740271 C0.249334761,0.0820037978 0.19047619,0.179149012 0.19047619,0.285437305 L0.19047619,11.714286 C0.19047619,11.8205743 0.249334761,11.9180052 0.343337042,11.967435 C0.38505234,11.9891498 0.430767735,12.0000072 0.476197408,12.0000072 C0.533055931,12.0000072 0.589628732,11.982864 0.63848706,11.9494346 L8.92440238,6.23501022 C9.00183283,6.18158035 9.04783394,6.09386394 9.04783394,5.99986166 C9.04783394,5.90585938 9.0015471,5.81814297 8.92440238,5.7647131 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
