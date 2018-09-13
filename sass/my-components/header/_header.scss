@@ -246,7 +246,7 @@
             background-color: #bc814c;
             top: 0;
             left: 0;
-            height: 60px;
+            height: 100px;
             width: 1px;
             animation-name: transl;
             animation-duration: 3s;
@@ -443,7 +443,6 @@
 
 @keyframes transl {
     to {
-        height: 100px;
         transform: translate(0, 200px);
     }
 }
