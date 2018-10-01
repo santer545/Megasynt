@@ -60,6 +60,10 @@
             right: 0;
             opacity: 1;
             transition: opacity 3s;
+
+            @media screen and (max-width: 767px) {
+                opacity: 0.3;
+            }
         }
     }
 
@@ -217,6 +221,18 @@
             transform: rotate(-340deg);
             background-color: #FFDFAB;
         }
+    }
+}
+
+.swiper-container {
+    @media screen and (max-width: 767px) {
+        overflow: visible;
+    }
+}
+
+.swiper-wrapper {
+    @media screen and (max-width: 767px) {
+        display: block;
     }
 }
 

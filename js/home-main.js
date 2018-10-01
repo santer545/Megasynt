@@ -1,65 +1,65 @@
 $(function() {
-    mainCarousel();
-    // const breakpoint = window.matchMedia('(max-width:767px)');
+    //mainCarousel();
+    const breakpoint = window.matchMedia('(max-width:767px)');
 
 
-    // var mySwiper;
+    var mySwiper;
 
-    // const breakpointChecker = function() {
-
-
-    //     if (breakpoint.matches === true) {
+    const breakpointChecker = function() {
 
 
-    //         if (mySwiper !== undefined) mySwiper.destroy(true, true);
+        if (breakpoint.matches === true) {
 
 
-    //         return;
+            if (mySwiper !== undefined) mySwiper.destroy(true, true);
 
 
-    //     } else if (breakpoint.matches === false) {
+            return;
 
 
-    //         return enableSwiper();
-
-    //     }
-
-    // };
-
-    // const enableSwiper = function() {
-
-    //     mySwiper = new Swiper('.js-swiper', {
-    //         direction: 'vertical',
-    //         slidesPerView: 1,
-    //         speed: 1800,
-    //         mousewheel: true,
-    //         //freeMode: true,
-    //         //freeModeMomentumBounce: false,
-    //         //freeModeMinimumVelocity: 0.15,
-    //         pagination: {
-    //             el: '.swiper-pagination',
-    //             clickable: true,
-    //         },
-    //     });
-
-    // };
-
-    // $('.js-insulation').click(function() {
-    //     mySwiper.slideTo(3,1800,false);
-    // })
-
-    // $('.js-stitch').click(function() {
-    //     mySwiper.slideTo(4,1800,false);
-    // })
-
-    // $('.js-scroll').click(function() {
-    //     mySwiper.slideTo(1,1800,false);
-    // })
-
-    //breakpoint.addListener(breakpointChecker);
+        } else if (breakpoint.matches === false) {
 
 
-    //breakpointChecker();
+            return enableSwiper();
+
+        }
+
+    };
+
+    const enableSwiper = function() {
+
+        mySwiper = new Swiper('.js-swiper', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            speed: 1800,
+            mousewheel: true,
+            //freeMode: true,
+            //freeModeMomentumBounce: false,
+            //freeModeMinimumVelocity: 0.15,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+    };
+
+    $('.js-insulation').click(function() {
+        mySwiper.slideTo(3,1800,false);
+    })
+
+    $('.js-stitch').click(function() {
+        mySwiper.slideTo(4,1800,false);
+    })
+
+    $('.js-scroll').click(function() {
+        mySwiper.slideTo(1,1800,false);
+    })
+
+    breakpoint.addListener(breakpointChecker);
+
+
+    breakpointChecker();
     addClass();
     showVideo();
     fadeIn();

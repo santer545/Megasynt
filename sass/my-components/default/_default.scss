@@ -13,6 +13,10 @@ body {
     color: #9A9A9A;
     font: 400 16px 'Montserrat', sans-serif;
     overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+        overflow: visible;
+    }
 }
 
 a {
@@ -47,6 +51,10 @@ strong {
 .wrapper {
     min-width: 320px;
     height: 100vh;
+
+    @media screen and (max-width: 767px) {
+        height: auto;
+    }
 }
 
 
