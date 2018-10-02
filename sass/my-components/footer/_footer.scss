@@ -9,6 +9,10 @@
             font-size: 14px;
             line-height: 29px;
         }
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
     }
 
     &-heading {

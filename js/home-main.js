@@ -1,4 +1,5 @@
 $(function() {
+    addingClass();
     //mainCarousel();
     const breakpoint = window.matchMedia('(max-width:767px)');
 
@@ -31,7 +32,7 @@ $(function() {
         mySwiper = new Swiper('.js-swiper', {
             direction: 'vertical',
             slidesPerView: 1,
-            speed: 1800,
+            speed: 1000,
             mousewheel: true,
             //freeMode: true,
             //freeModeMomentumBounce: false,
@@ -63,7 +64,37 @@ $(function() {
     addClass();
     showVideo();
     fadeIn();
+
+
 })
+
+$(window).on('resize', addingClass);
+
+function addingClass() {
+    console.log($(window).width());
+    if($(window).width() < 768) {
+        console.log('!!!!');
+        $('.js-insulation').removeClass('js-insulation').addClass('js-insulation-mobile');
+        $('.js-stitch').removeClass('js-stitch').addClass('js-stitch-mobile');
+
+
+        $('.js-insulation-mobile').on('click', function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#insulation").offset().top
+            }, 2000);
+        });
+
+        $('.js-stitch-mobile').on('click', function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#stitch").offset().top
+            }, 2000);
+        })
+        
+    } else {
+        $('.js-insulation').removeClass('js-insulation-mobile').addClass('js-insulation');
+        $('.js-stitch').removeClass('js-stitch-mobile').addClass('js-stitch');
+    }
+}
 
 function mainCarousel() {
     var mySwiper = new Swiper('.js-swiper', {
