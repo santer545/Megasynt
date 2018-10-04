@@ -46,16 +46,14 @@ $(function() {
     };
 
     $('.js-insulation').click(function() {
-        mySwiper.slideTo(3,1800,false);
+        mySwiper.slideTo(3, 1800, false);
     })
 
     $('.js-stitch').click(function() {
-        mySwiper.slideTo(4,1800,false);
+        mySwiper.slideTo(4, 1800, false);
     })
 
-    $('.js-scroll').click(function() {
-        mySwiper.slideTo(1,1800,false);
-    })
+
 
     breakpoint.addListener(breakpointChecker);
 
@@ -65,6 +63,20 @@ $(function() {
     showVideo();
     fadeIn();
 
+    if ($(window).width() < 768) {
+        $('.js-scroll-mobile').click(function() {
+            //mySwiper.slideTo(1, 1800, false);
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".swiper-slide:nth-child(2)").offset().top
+            }, 2000);
+        })
+    } else {
+        $('.js-scroll').click(function() {
+            console.log('!!!');
+            mySwiper.slideTo(1, 1800, false);
+        })
+    }
+
 
 })
 
@@ -72,7 +84,7 @@ $(window).on('resize', addingClass);
 
 function addingClass() {
     console.log($(window).width());
-    if($(window).width() < 768) {
+    if ($(window).width() < 768) {
         console.log('!!!!');
         $('.js-insulation').removeClass('js-insulation').addClass('js-insulation-mobile');
         $('.js-stitch').removeClass('js-stitch').addClass('js-stitch-mobile');
@@ -80,19 +92,23 @@ function addingClass() {
 
         $('.js-insulation-mobile').on('click', function() {
             $([document.documentElement, document.body]).animate({
-                scrollTop: $("#insulation").offset().top
+                scrollTop: $(".swiper-slide:nth-child(4)").offset().top
             }, 2000);
         });
 
         $('.js-stitch-mobile').on('click', function() {
             $([document.documentElement, document.body]).animate({
-                scrollTop: $("#stitch").offset().top
+                scrollTop: $(".swiper-slide:nth-child(5)").offset().top
             }, 2000);
         })
-        
+
+        $('.js-scroll').addClass('js-scroll-mobile').removeClass('js-scroll');
+
     } else {
         $('.js-insulation').removeClass('js-insulation-mobile').addClass('js-insulation');
         $('.js-stitch').removeClass('js-stitch-mobile').addClass('js-stitch');
+        $('.js-scroll-mobile').addClass('js-scroll').removeClass('js-scroll-mobile');
+
     }
 }
 
@@ -127,14 +143,7 @@ function mainCarousel() {
         mySwiper.slideTo(4, 1800, false);
     })
 
-    $('.js-scroll').click(function() {
-        mySwiper.slideTo(1, 1800, false);
-    })
 }
-
-
-
-
 
 
 
