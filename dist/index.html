@@ -31,7 +31,7 @@
                                         <li class="js-insulation">Утеплители</li>
                                         <li class="js-stitch">Стёжка</li>
                                     </ul>
-                                    <a href="#" class="js-scroll">Узнать больше</a>
+                                    <a class="js-scroll">Узнать больше</a>
                                     <span class="line">
                                         
                                     </span>
@@ -42,8 +42,15 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="slide-video slide">
-                        <video controls preload="none" loop muted autoplay>
-                            <source src="images/airnauts.mp4" type="video/mp4">
+                        <div class="js-sound sound">
+                            <img src="images/speaker-1.svg" alt="">
+                        </div>
+                        <div class="js-sound-off sound-off sound">
+                            <img src="images/speaker.svg" alt="">
+                        </div>
+                        <video preload="none" loop autoplay id="video-bg">
+                            <source src="images/zalit-na-sajt.webm" type="video/webm" />
+                            <source src="images/zalit-na-sajt.mp4" type="video/mp4">
                         </video>
                         <div class="video-text">
                             <span>Привет</span>

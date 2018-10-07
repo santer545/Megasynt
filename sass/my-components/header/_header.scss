@@ -47,11 +47,20 @@
             left: 50%;
             min-width: 100%;
             min-height: 100%;
+            display: block;
             width: auto;
             height: auto;
             z-index: -100;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+
+            @media screen and (max-width: 767px) {
+                position: relative;
+                transform: translate(0, 0);
+                left: auto;
+                top: auto;
+                z-index: 1;
+            }
         }
 
         &:after {
@@ -78,6 +87,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         min-width: 70%;
+        // z-index: 2;
 
         @media screen and (max-width: 1500px) {
             padding: 2% 150px;
@@ -110,7 +120,7 @@
         }
 
         @media screen and (max-width: 767px) {
-            padding-left: 45px;
+            padding-left: 56px;
         }
     }
 
@@ -133,6 +143,8 @@
 
         @media screen and (max-width: 767px) {
             margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 24px;
         }
 
         span {
@@ -210,6 +222,24 @@
     }
 }
 
+.sound {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    cursor: pointer;
+
+    &-off {
+        display: none;
+    }
+
+    img {
+        width: 40px;
+    }
+}
+
 .swiper-slide-active {
     .slide-video {
         &:after {
@@ -269,7 +299,7 @@
             height: 100px;
             width: 1px;
             animation-name: transl;
-            animation-duration: 3s;
+            animation-duration: 4s;
             animation-iteration-count: infinite;
             animation-fill-mode: both;
 
@@ -525,7 +555,7 @@
     }
 
     @media screen and (max-width: 767px) {
-        width: 40px;
+        width: 56px;
     }
 
     &-img {
@@ -548,6 +578,12 @@
 
     @media screen and (max-width: 1500px) {
         margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 17px;
+        margin-bottom: 15px;
+        font-weight: normal;
     }
 }
 
@@ -581,8 +617,12 @@
 
     @media screen and (max-width: 767px) {
         width: 100%;
-        height: 120px;
+        height: 317px;
         overflow: hidden;
+    }
+
+    @media screen and (max-width: 500px) {
+        height: 153px;  
     }
 
     img {
@@ -607,6 +647,7 @@
         font-size: 19px;
         letter-spacing: 22px;
         line-height: 56px;
+        z-index: 2;
     }
 
     &:after {
@@ -666,11 +707,10 @@
     bottom: 0;
     width: 0;
     overflow: hidden;
-    background-color: #000;
     transition: width 0.3s;
 
     @media screen and (max-width: 1500px) {
-        height: 500px;
+        top: -70px;
     }
 
     @media screen and (max-width: 767px) {
@@ -680,23 +720,30 @@
 
     &.active {
         width: 980px;
+        overflow: visible;
         @media screen and (max-width: 767px) {
             width: 100%;
         }
     }
 
     video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -100;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        width: 100%;    
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // min-width: 100%;
+        // min-height: 100%;
+        // width: auto;
+        // height: auto;
+        position: relative; 
         z-index: 1;
+        // -webkit-transform: translate(-50%, -50%);
+        // transform: translate(-50%, -50%);
+        // z-index: 1;
+        
+        // @media screen and (max-width: 1500px) {
+        //     position: static;
+        // }
     }
 
     img {
@@ -812,9 +859,14 @@
 
 .swiper-pagination-bullet {
     width: 50px;
-    height: 2px;
+    height: 3px;
     background-color: #D8D8D8;
     transition: width 0.3s;
+    border-radius: 0;
+
+    &:focus {
+        outline: none;
+    }
 
 
     &.swiper-pagination-bullet-active {
@@ -828,14 +880,37 @@
 }
 
 .slide-fifth {
-    background-image: url('../images/map.jpg');
+    background-image: url('../images/map.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -500px center;
+    background-position: -600px center;
+
+    @media screen and (max-width: 1500px) {
+        background-position: -980px center;
+    }
 
     @media screen and (max-width: 767px) {
-        background-image: url('../images/map-1.png');
+        background-image: url('../images/map-1.png')!important;
         background-position: center center;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0; 
+        bottom: 0;  
+        width: 75%; 
+        background: linear-gradient(90deg, #FAFAFA 10%, rgba(250,250,250,0) 100%);
+    }
+
+    .slide-wrapper {
+        z-index: 2;
+        @media screen and (max-width: 767px) {
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: translate(0, 0);
+        }
     }
 }
 
