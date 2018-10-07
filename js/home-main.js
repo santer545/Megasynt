@@ -82,6 +82,18 @@ $(function() {
 })
 
 $(window).on('resize', addingClass);
+var vid = document.getElementById("video-bg");
+$(window).on('scroll', function() {
+    $('#video-bg').each(function() {
+        if ($(this).isInViewport()) {
+            
+            vid.muted = true;
+            vid.play();
+        } else {
+            $(this).removeClass('active');
+        }
+    });
+});
 
 function addingClass() {
     console.log($(window).width());
@@ -116,6 +128,7 @@ function addingClass() {
 function sound() {
     var vid = document.getElementById("video-bg");
     vid.muted = true;
+    //vid.play();
     $('.js-sound').click(function() {
         vid.muted = false;
         $(this).css('display', 'none');
@@ -129,6 +142,16 @@ function sound() {
         $('.js-sound').css('display', 'block');
     })
 }
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
 
 function mainCarousel() {
     var mySwiper = new Swiper('.js-swiper', {

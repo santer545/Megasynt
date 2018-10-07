@@ -12,6 +12,7 @@
     &-first {
         background-color: #18233A;
         height: 100vh;
+
         a[href^="tel"] {
             font-size: 14px;
             line-height: 36px;
@@ -41,26 +42,24 @@
         @media screen and (max-width: 767px) {
             height: 100vh;
         }
-        video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            display: block;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
 
-            @media screen and (max-width: 767px) {
-                position: relative;
-                transform: translate(0, 0);
-                left: auto;
-                top: auto;
-                z-index: 1;
-            }
+        video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            //position: absolute;
+            -o-object-fit: cover;
+            object-fit: cover;
+
+            // @media screen and (max-width: 767px) {
+            //     position: relative;
+            //     transform: translate(0, 0);
+            //     left: auto;
+            //     top: auto;
+            //     z-index: 1;
+            // }
         }
 
         &:after {
@@ -75,7 +74,8 @@
             transition: opacity 3s;
 
             @media screen and (max-width: 767px) {
-                opacity: 0.3;
+                opacity: 0;
+                display: none;
             }
         }
     }
@@ -165,11 +165,13 @@
             font-size: 14px;
             line-height: 29px;
         }
+
         ul {
             li {
                 position: relative;
                 color: #717171;
                 padding-left: 20px;
+
                 &:before {
                     content: '';
                     position: absolute;
@@ -305,6 +307,7 @@
 
         }
     }
+
     ul {
         margin-bottom: 15px;
 
@@ -480,6 +483,7 @@
             width: auto;
             margin-bottom: 20px;
         }
+
         ul {
             li {
                 font-size: 18px;
@@ -561,6 +565,7 @@
     &-img {
         padding-top: 100px;
         text-align: center;
+
         @media screen and (max-width: 767px) {
             width: 20px;
             margin: 0 auto;
@@ -610,26 +615,17 @@
     @media screen and (max-width: 991px) {
         width: 200px;
     }
-    
+
     @media screen and (min-width: 768px) {
         background-image: none !important;
     }
 
     @media screen and (max-width: 767px) {
         width: 100%;
-        height: 317px;
+        height: 432px;
         overflow: hidden;
     }
 
-    @media screen and (max-width: 500px) {
-        height: 153px;  
-    }
-
-    img {
-        @media screen and (max-width: 767px) {
-            display: none;
-        }
-    }
 }
 
 .video-text {
@@ -721,13 +717,14 @@
     &.active {
         width: 980px;
         overflow: visible;
+
         @media screen and (max-width: 767px) {
             width: 100%;
         }
     }
 
     video {
-        width: 100%;    
+        width: 100%;
         // position: absolute;
         // top: 50%;
         // left: 50%;
@@ -735,12 +732,12 @@
         // min-height: 100%;
         // width: auto;
         // height: auto;
-        position: relative; 
+        position: relative;
         z-index: 1;
         // -webkit-transform: translate(-50%, -50%);
         // transform: translate(-50%, -50%);
         // z-index: 1;
-        
+
         // @media screen and (max-width: 1500px) {
         //     position: static;
         // }
@@ -835,6 +832,7 @@
 
 .swiper-slide {
     height: auto !important;
+
     @media screen and (min-width: 768px) {
         height: 100vh !important;
     }
@@ -860,7 +858,7 @@
 .swiper-pagination-bullet {
     width: 50px;
     height: 3px;
-    background-color: #D8D8D8;
+    background-color: #666;
     transition: width 0.3s;
     border-radius: 0;
 
@@ -890,21 +888,22 @@
     }
 
     @media screen and (max-width: 767px) {
-        background-image: url('../images/map-1.png')!important;
+        background-image: url('../images/map-1.png') !important;
         background-position: center center;
     }
 
     &:after {
         content: '';
         position: absolute;
-        top: 0; 
-        bottom: 0;  
-        width: 75%; 
-        background: linear-gradient(90deg, #FAFAFA 10%, rgba(250,250,250,0) 100%);
+        top: 0;
+        bottom: 0;
+        width: 75%;
+        background: linear-gradient(90deg, #FAFAFA 10%, rgba(250, 250, 250, 0) 100%);
     }
 
     .slide-wrapper {
         z-index: 2;
+
         @media screen and (max-width: 767px) {
             position: relative;
             left: auto;
@@ -939,6 +938,7 @@
 
     &:nth-child(3) {
         padding-top: 5%;
+
         @media screen and (max-width: 767px) {
             display: none;
         }
@@ -946,6 +946,7 @@
 
     &:nth-child(4) {
         padding-top: 10%;
+
         @media screen and (max-width: 767px) {
             display: none;
         }
@@ -953,6 +954,7 @@
 
     &:nth-child(5) {
         padding-top: 20%;
+
         @media screen and (max-width: 767px) {
             display: none;
         }
