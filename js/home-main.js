@@ -44,6 +44,16 @@ $(function() {
             },
         });
 
+        mySwiper.on('slideChange', function() {
+            if(mySwiper.realIndex == 0) {
+                $('.swiper-pagination').addClass('hidden');
+            } else {
+                $('.swiper-pagination').removeClass('hidden');
+            }
+        });
+
+
+
     };
 
     $('.js-insulation').click(function() {

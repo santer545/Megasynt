@@ -24,6 +24,25 @@
                 display: none;
             }
         }
+
+        &:after {
+            content: '';
+            width: 1px;
+            position: absolute;
+            left: 50%;
+            top: -60px;
+            height: 0;
+            transform-origin: 100% 100%;
+            transform: rotate(28deg);
+            background-color: #FFDFAB;
+            animation: line 0.3s steps(60, end);
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+
+            @media screen and (max-width: 1500px) {
+                display: none;
+            }
+        }
     }
 
     &-second,
@@ -1134,4 +1153,8 @@
             }
         }
     }
+}
+
+.hidden {
+    display: none !important;
 }
