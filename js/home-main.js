@@ -50,8 +50,12 @@ $(function() {
         mySwiper.slideTo(3, 600, false);
     })
 
-    $('.js-stitch').click(function() {
+    $('.js-tinsul').click(function() {
         mySwiper.slideTo(4, 600, false);
+    })
+
+    $('.js-stitch').click(function() {
+        mySwiper.slideTo(5, 600, false);
     })
 
 

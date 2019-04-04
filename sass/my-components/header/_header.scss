@@ -10,7 +10,9 @@
     }
 
     &-first {
-        background-color: #18233A;
+        background-image: url('../images/first.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
         height: 100vh;
 
         a[href^="tel"] {
@@ -256,6 +258,7 @@
             height: 2000px;
             transform: rotate(-340deg);
             background-color: #FFDFAB;
+
         }
     }
 }
@@ -288,8 +291,13 @@
         transition: all 0.6s;
         overflow: hidden;
 
+        @media screen and (max-width: 1500px) {
+            left: 120%;
+        }
+
         @media screen and (max-width: 767px) {
             height: 120px;
+            display: none;
         }
 
         &:after {
@@ -356,7 +364,7 @@
             content: '';
             width: 1px;
             position: absolute;
-            right: 20%;
+            right: 35%;
             bottom: 0;
             height: 0;
             transform-origin: 100% 100%;
@@ -368,6 +376,7 @@
 
             @media screen and (max-width: 1500px) {
                 right: 15%;
+                display: none;
             }
 
             @media screen and (max-width: 1300px) {
@@ -388,9 +397,9 @@
             display: block;
             margin-bottom: 30px;
             position: relative;
-            white-space: nowrap;
+
             overflow: hidden;
-            width: 100%;
+            width: 55%;
 
             &.active {
                 animation: type 2s steps(60, end);
@@ -750,6 +759,75 @@
     }
 }
 
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-primary {
+    padding: 26px 55px;
+    background: #BC814C;
+    border: 2px solid #BC814C;
+    box-sizing: border-box;
+    color: #fff;
+    box-shadow: 0px 30px 24px rgba(0, 0, 0, 0.3);
+
+    @media screen and (max-width: 767px) {
+        padding: 13px;
+        width: 100%;
+    }
+
+    img {
+        margin-right: 10px;
+    }
+
+    span,
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.btn-modal {
+    width: 100%;
+    padding: 19px 30px;
+    background: #18233A;
+    color: #fff;
+
+    img {
+        display: none;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    &.active {
+        
+        background: linear-gradient(0deg, #48BD45, #48BD45), #18233A;
+
+        img {
+            display: inline-block;
+        }
+    }
+}
+
 .btn-video {
     position: absolute;
     bottom: 40px;
@@ -804,6 +882,11 @@
         @media screen and (max-width: 767px) {
             opacity: 1;
         }
+    }
+
+    &__inverse {
+        background-color: #BC814C;
+        color: #fff;
     }
 }
 
@@ -881,10 +964,10 @@
     background-image: url('../images/map.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -600px center;
+    background-position: 50% center;
 
     @media screen and (max-width: 1500px) {
-        background-position: -980px center;
+        
     }
 
     @media screen and (max-width: 767px) {
@@ -979,5 +1062,76 @@
         opacity: 0.4;
         padding-top: 30px;
         padding-bottom: 60px;
+    }
+}
+
+.logo {
+    @media screen and (max-width: 767px) {
+        width: 100px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-bottom: 70px;
+    }
+}
+
+.navbar {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+
+    @media screen and (max-width: 767px) {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    li {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+        padding: 13px 0;
+        cursor: pointer;    
+
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+            line-height: 36px;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        svg path,
+            svg rect {
+                stroke: #fff;
+            }
+
+        &:hover {
+            color: #FFDFAB;
+
+            svg path,
+            svg rect {
+                stroke: #FFDFAB;
+            }
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #FFDFAB;
+            @media screen and (max-width: 767px) {
+                border: none;
+            }
+        }
+
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+        }
     }
 }
