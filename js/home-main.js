@@ -28,6 +28,8 @@ $(function() {
 
     };
 
+    $('.js-phone').mask('(000) 000 0000');
+
     const enableSwiper = function() {
 
         mySwiper = new Swiper('.js-swiper', {
@@ -68,6 +70,16 @@ $(function() {
         mySwiper.slideTo(5, 600, false);
     })
 
+
+    var carousel = new Swiper('.js-carousel', {
+            slidesPerView: 5,
+            speed: 600,
+            mousewheel: false,
+            //freeMode: true,
+            //freeModeMomentumBounce: false,
+            //freeModeMinimumVelocity: 0.15,
+            
+        });
 
 
     breakpoint.addListener(breakpointChecker);

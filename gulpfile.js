@@ -91,6 +91,7 @@ gulp.task('homeScripts', function() {
             sourceDir + '/jquery-2.2.1.min.js',
             sourceDir + '/modal.js',
             sourceDir + '/swiper.min.js',
+            sourceDir + '/jquery.mask.js',
             sourceDir + '/home-main.js'
         ])
 

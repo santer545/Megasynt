@@ -26,6 +26,12 @@
                                 <div class="main-text__wrapper">
                                     <span>Переходи на лучшее</span>
                                 </div>
+                                <div class="main-menu fadeIn js-top-fade">
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#callback" type="button"><img src="images/triangle.png" alt=""><span>Получить бесплатные образцы</span></button>
+                                    <!-- <a class="js-scroll">Узнать больше</a> -->
+                                    <span class="line">
+                                    </span>
+                                </div>
                                 <ul class="navbar">
                                     <li class="js-insulation">
                                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +55,7 @@
                                         </svg>
                                         Утеплители
                                     </li>
-                                    <li class="js-tinsul">
+                                    <li class="js-tinsul active">
                                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M20.3463 21.0971H16V20H26V21.0971H21.6537V32H20.3463V21.0971Z" fill="#FFDFAB" />
                                             <circle cx="21" cy="25" r="20.5" stroke="#FFDFAB" />
@@ -77,12 +83,6 @@
                                         Стёжка
                                     </li>
                                 </ul>
-                                <div class="main-menu fadeIn js-top-fade">
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#callback" type="button"><img src="images/triangle.png" alt=""><span>Получить бесплатные образцы</span></button>
-                                    <!-- <a class="js-scroll">Узнать больше</a> -->
-                                    <span class="line">
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -99,9 +99,9 @@
                             <source src="images/zalit-na-sajt.webm" type="video/webm" />
                             <source src="images/zalit-na-sajt.mp4" type="video/mp4">
                         </video>
-                        <div class="video-text">
+                        <!-- <div class="video-text">
                             <span>Привет</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -280,7 +280,7 @@
                     <div class="slide-img slide">
                         <div class="sidebar">
                         </div>
-                        <div class="images-list">
+                        <!-- <div class="images-list">
                             <div class="images-item">
                                 <img src="images/img-1.png" alt="">
                             </div>
@@ -296,23 +296,94 @@
                             <div class="images-item">
                                 <img src="images/img-4.png" alt="">
                             </div>
-                        </div>
-                        <div class="images-text">
-                            Более 300 видов дизайна
+                        </div> -->
+                        <div class="images-list">
+                            <div class="swiper-container swiper-container-v js-carousel">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-3.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-4.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-3.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="images-item">
+                                            <img src="images/img-4.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slide-fifth slide">
-                        <div class="sidebar">
+                    <div class="images-text">
+                        Более 300 видов дизайна
+                    </div>
+                
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-fifth slide">
+                    <!-- <div class="sidebar">
                             <div class="sidebar-img">
                                 <img src="images/logo-sidebar.svg" alt="">
                             </div>
-                        </div>
-                        <div class="slide-wrapper">
-                            <div class="slide-holder">
-                                <div class="d-f">
-                                    <div class="footer-menu">
+                        </div> -->
+                    <div class="slide-wrapper">
+                        <div class="slide-holder">
+                            <img src="images/map-1.png" alt="" class="mobile">
+                            <div class="d-f">
+                                <div class="footer-menu">
+                                    <div class="form-wrapper">
+                                        <div class="form-heading">
+                                            <h4 class="modal-title" id="myModalLabel">Получите <br> бесплатные образцы</h4>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Как к вам обращаться?">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control js-phone" placeholder="Телефон">
+                                        </div>
+                                        <button type="button" class="btn btn-modal"><img src="images/verified.png" alt="">Отправить</button>
+                                    </div>
+                                    <div class="footer-holder">
                                         <div class="footer-heading">Утеплитель и стежка</div>
                                         <div class="d-f footer-contacts">
                                             <div>Отдел продаж: <br>
@@ -323,15 +394,16 @@
                                                 Харьков, Украина
                                             </div>
                                         </div>
-                                        <!-- <ul>
+                                    </div>
+                                    <!-- <ul>
                                             <li>Василий Петров</li>
                                             <li>тел <a href="tel:0503333333">050 333 33 33</a></li>
                                             <li><a href="mailto:email@gmail.com">email@gmail.com</a></li>
                                             <li>ул. Сумская 32</li>
                                             <li>Харьков, Украина</li>
                                         </ul> -->
-                                    </div>
-                                    <!-- <div class="footer-menu">
+                                </div>
+                                <!-- <div class="footer-menu">
                                         <div class="footer-heading">Стежка</div>
                                         <ul>
                                             <li>Юрий Иванов</li>
@@ -341,15 +413,15 @@
                                             <li>Харьков, Украина</li>
                                         </ul>
                                     </div> -->
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination hidden"></div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination hidden"></div>
+    </div>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -363,7 +435,7 @@
                         <input type="text" class="form-control" placeholder="Как к вам обращаться?">
                     </div>
                     <div class="form-group">
-                        <input type="tel" class="form-control" placeholder="Телефон">
+                        <input type="tel" class="form-control js-phone" placeholder="Телефон">
                     </div>
                 </div>
                 <div class="modal-footer">
