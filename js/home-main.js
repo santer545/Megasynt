@@ -47,7 +47,7 @@ $(function() {
         });
 
         mySwiper.on('slideChange', function() {
-            if(mySwiper.realIndex == 0) {
+            if (mySwiper.realIndex == 0) {
                 $('.swiper-pagination').addClass('hidden');
             } else {
                 $('.swiper-pagination').removeClass('hidden');
@@ -72,14 +72,22 @@ $(function() {
 
 
     var carousel = new Swiper('.js-carousel', {
-            slidesPerView: 5,
-            speed: 600,
-            mousewheel: false,
+        slidesPerView: 2,
+        speed: 600,
+        mousewheel: false,
+        breakpoints: {
+
+            767: {
+                slidesPerView: 2,
+            },
+
             //freeMode: true,
             //freeModeMomentumBounce: false,
             //freeModeMinimumVelocity: 0.15,
-            
-        });
+
+        }
+
+    });
 
 
     breakpoint.addListener(breakpointChecker);
@@ -112,7 +120,7 @@ var vid = document.getElementById("video-bg");
 $(window).on('scroll', function() {
     $('#video-bg').each(function() {
         if ($(this).isInViewport()) {
-            
+
             vid.muted = true;
             vid.play();
         } else {
