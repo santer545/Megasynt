@@ -72,7 +72,7 @@ $(function() {
 
 
     var carousel = new Swiper('.js-carousel', {
-        slidesPerView: 2,
+        slidesPerView: 5,
         speed: 600,
         mousewheel: false,
         breakpoints: {
