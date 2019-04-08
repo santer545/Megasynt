@@ -23,6 +23,13 @@
             @media screen and (max-width: 767px) {
                 display: none;
             }
+
+            &.mobile {
+                @media screen and (max-width: 767px) {
+                    display: block;
+                    margin-bottom: 30px;
+                }
+            }
         }
 
         &:after {
@@ -457,6 +464,7 @@
                 font-size: 14px;
                 line-height: 40px;
                 letter-spacing: 8px;
+                margin-bottom: 0;
             }
 
             @media screen and (max-width: 320px) {
