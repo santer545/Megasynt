@@ -46,13 +46,13 @@ $(function() {
             },
         });
 
-        mySwiper.on('slideChange', function() {
-            if (mySwiper.realIndex == 0) {
-                $('.swiper-pagination').addClass('hidden');
-            } else {
-                $('.swiper-pagination').removeClass('hidden');
-            }
-        });
+        // mySwiper.on('slideChange', function() {
+        //     if (mySwiper.realIndex == 0) {
+        //         $('.swiper-pagination').addClass('hidden');
+        //     } else {
+        //         $('.swiper-pagination').removeClass('hidden');
+        //     }
+        // });
 
 
 
@@ -75,6 +75,10 @@ $(function() {
         slidesPerView: 5,
         speed: 600,
         mousewheel: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         breakpoints: {
 
             767: {
@@ -116,18 +120,20 @@ $(function() {
 })
 
 $(window).on('resize', addingClass);
-var vid = document.getElementById("video-bg");
-$(window).on('scroll', function() {
-    $('#video-bg').each(function() {
-        if ($(this).isInViewport()) {
 
-            vid.muted = true;
-            vid.play();
-        } else {
-            $(this).removeClass('active');
-        }
-    });
-});
+// var vid = document.getElementById("video-bg");
+
+// $(window).on('scroll', function() {
+//     $('#video-bg').each(function() {
+//         if ($(this).isInViewport()) {
+
+//             vid.muted = true;
+//             vid.play();
+//         } else {
+//             $(this).removeClass('active');
+//         }
+//     });
+// });
 
 function addingClass() {
     console.log($(window).width());
@@ -243,6 +249,20 @@ function showVideo() {
     $('.js-close').click(function() {
         $(this).closest('.video-section').find('.video-box').removeClass('active');
         $(this).closest('.video-section').find('video')[0].pause();
+    })
+
+
+    $('.slide-video').on('click', function() {
+        $(this).addClass('active');
+        $('.play').addClass('hidden');
+        var videoBg = document.getElementById("video-bg");
+        //videoBg.controls = false;
+        if(videoBg.paused) {
+            videoBg.play();
+        } else {
+            videoBg.pause();
+        }
+        
     })
 
 }
