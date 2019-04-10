@@ -548,12 +548,18 @@
         display: inline-block;
         vertical-align: top;
 
-        @media screen and (max-width: 1200px) {
-            width: 260px;
+        @media screen and (max-width: 1500px) {
+            width: 20%;
         }
 
+        @media screen and (max-width: 991px) {
+            width: 19%;
+        }
+
+        
         @media screen and (max-width: 767px) {
             display: block;
+            width: 100%;
             width: auto;
             margin-bottom: 20px;
         }
