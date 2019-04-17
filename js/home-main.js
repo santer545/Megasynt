@@ -167,7 +167,7 @@ function addingClass() {
 
 function sound() {
     var vid = document.getElementById("video-bg");
-    vid.muted = true;
+    //vid.muted = true;
     //vid.play();
     $('.js-sound').click(function() {
         vid.muted = false;
